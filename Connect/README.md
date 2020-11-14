@@ -1,6 +1,6 @@
 # Connect Apache Spark and DataStax Astra through Spark-Shell
 
-We will be using [Gitpod](https://www.gitpod.io/) as our dev environment so that you can quickly test this out without having to worry about OS inconsistencies. If you have not already opened this in gitpod, then hit the button below and get started! <br></br>
+We will be using [Gitpod](https://www.gitpod.io/) as our dev environment so that you can quickly test this out without having to worry about OS inconsistencies. If you have not already opened this in gitpod, then `CTR + Click` the button below and get started! <br></br>
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/adp8ke/Apache-Spark-and-DataStax-Astra)
 
 
