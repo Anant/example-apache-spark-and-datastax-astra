@@ -22,14 +22,14 @@ We will be using [Gitpod](https://www.gitpod.io/) as our dev environment so that
  
 ## Step 5: Run Spark-Shell and connect to our Astra database
   1. If not already: `cd spark-3.0.1-bin-hadoop2.7`
-  2. Insert your specific Astra database name into the `{your-db-name}` spots; as well as, insert the `{master-url}` for the master url. To the find the master url in Gitpod, open port `8080` in a new browser and copy it paste it into the designated spot below. 
+  2. Insert your specific Astra database name into the `{your-db-name}` spots; as well as, insert the `{master-url}` for the master url. To the find the master url in Gitpod, open port `8080` in a new browser and copy it paste it into the designated spot below. Additionally, insert your crendentials at the designated username and password spots.
   ~~~
   ./bin/spark-shell --packages com.datastax.spark:spark-cassandra-connector_2.12:3.0.0 \
   --master {master-url} \
   --files /workspace/Connect/secure-connect-{your-db-name}.zip \
   --conf spark.cassandra.connection.config.cloud.path=secure-connect-{your-db-name}.zip \
-  --conf spark.cassandra.auth.username=username \
-  --conf spark.cassandra.auth.password=password \
+  --conf spark.cassandra.auth.username={username} \
+  --conf spark.cassandra.auth.password={password} \
   --conf spark.sql.extensions=com.datastax.spark.connector.CassandraSparkExtensions
   ~~~
   
