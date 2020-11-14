@@ -12,7 +12,7 @@ We will be using [Gitpod](https://www.gitpod.io/) as our dev environment so that
 2. `cd spark-3.0.1-bin-hadoop2.7`
 3. `./sbin/start-master.sh`
 4. `./sbin/start-slave.sh <master-url>`
-    - To the find the master url in Gitpod, open port `8080` in a new browser and copy it paste the master url into the designated spot
+    - To the find the master url in Gitpod, open port `8080` in a new browser and copy and paste the master url into the designated spot
 
 ## Step 3: Download DataStax Astra Secure Connect Bundle and Insert into Gitpod
 1. If you do not already have a DataStax Astra database, you can follow the set-up instructions on the README.md for https://github.com/Anant/cassandra.api up to Step 1.4 or "Download Secure Connect Bundle".
@@ -24,7 +24,7 @@ We will be using [Gitpod](https://www.gitpod.io/) as our dev environment so that
  
 ## Step 5: Run Spark-Shell and connect to our Astra database
 1. If not already: `cd spark-3.0.1-bin-hadoop2.7`
-2. Insert your specific Astra database name into the `{your-db-name}` spots; as well as, insert the `{master-url}` for the master url. To the find the master url in Gitpod, open port `8080` in a new browser and copy it paste it into the designated spot below. Additionally, insert your crendentials at the designated username and password spots.
+2. Insert your specific Astra database name into the `{your-db-name}` spots; as well as, insert the `{master-url}` for the master url. To the find the master url in Gitpod, open port `8080` in a new browser and copy and paste it into the designated spot below. Additionally, insert your crendentials at the designated username and password spots.
 ~~~
 ./bin/spark-shell --packages com.datastax.spark:spark-cassandra-connector_2.12:3.0.0 \
 --master {master-url} \
