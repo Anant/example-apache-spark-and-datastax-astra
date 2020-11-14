@@ -5,7 +5,7 @@ We will be using [Gitpod](https://www.gitpod.io/) as our dev environment so that
 
 
 ## Step 1: Download Apache Spark 3.0.1
-1. `curl -L -s https://apache.osuosl.org/spark/spark-3.0.1/spark-3.0.1-bin-hadoop2.7.tgz | tar xvz -C /workspace/Connect`
+1. `curl -L -s https://apache.osuosl.org/spark/spark-3.0.1/spark-3.0.1-bin-hadoop2.7.tgz | tar xvz -C /workspace/Apache-Spark-and-DataStax-Astra/Connect`
 
 ## Step 2: Run Apache Spark in standalone cluster mode with 1 worker
 1. If not already: `cd Connect`
@@ -28,7 +28,7 @@ We will be using [Gitpod](https://www.gitpod.io/) as our dev environment so that
 ~~~
 ./bin/spark-shell --packages com.datastax.spark:spark-cassandra-connector_2.12:3.0.0 \
 --master {master-url} \
---files /workspace/Connect/secure-connect-{your-db-name}.zip \
+--files /workspace/Apache-Spark-and-DataStax-Astra/Connect/secure-connect-{your-db-name}.zip \
 --conf spark.cassandra.connection.config.cloud.path=secure-connect-{your-db-name}.zip \
 --conf spark.cassandra.auth.username={username} \
 --conf spark.cassandra.auth.password={password} \
