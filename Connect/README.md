@@ -50,3 +50,8 @@ spark.sql("SHOW TABLES FROM mycatalog.test;").show
 spark.sql("use mycatalog.test;")
 spark.sql("select * from leaves").show
 ~~~
+
+## Additional Resources
+
+- If you want to watch how to do this in a live demonstration, check out this [YouTube Video]()
+- Check out this accompanying [blog]() as well!
