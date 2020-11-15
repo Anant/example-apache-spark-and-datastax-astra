@@ -39,15 +39,15 @@ We will be using [Gitpod](https://www.gitpod.io/) as our dev environment so that
 1. You can run one or both, within the Spark-Shell to test the connection:
 ~~~
 import org.apache.spark.sql.cassandra._
-val data = spark.read.cassandraFormat("leaves", "test").load
+val data = spark.read.cassandraFormat("leaves", "{your-keyspace}").load
 data.printSchema
 data.show
 ~~~
 AND / OR
 ~~~
 spark.conf.set(s"spark.sql.catalog.mycatalog", "com.datastax.spark.connector.datasource.CassandraCatalog")
-spark.sql("SHOW TABLES FROM mycatalog.test;").show
-spark.sql("use mycatalog.test;")
+spark.sql("SHOW TABLES FROM mycatalog.{your-keyspace};").show
+spark.sql("use mycatalog.{your-keyspace};")
 spark.sql("select * from leaves").show
 ~~~
 
