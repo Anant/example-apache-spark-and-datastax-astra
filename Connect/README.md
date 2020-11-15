@@ -19,8 +19,8 @@ We will be using [Gitpod](https://www.gitpod.io/) as our dev environment so that
 2. Once you have downloaded the Astra Secure Connect Bundle, drag-and-drop it into the "Connect" directory in Gitpod.
   
 ## Step 4: Download DataStax Studio Notebook and Run Cells in Astra Studio
-1. While we have DataStax Astra open, let's go ahead and download this notebook [file](). Once the notebook is downloaded, open Studio on DataStax Astra and then drag-and-drop the notebook file into Studio.
-2. Run the cells in the notebook and set up our Astra database for when we connect to it using Apache Spark.
+1. While we have DataStax Astra open, let's go ahead and download this notebook [file](https://drive.google.com/file/d/1uwCuUkd4EOi16FSCxT2gKRdhBXxtObh8/view?usp=sharing). Once the notebook is downloaded, open Studio on DataStax Astra and then drag-and-drop the notebook file into Studio.
+2. Run the cells in the notebook and set up our Astra database for when we connect to it using Apache Spark. Don't forget to select your keyspace when running the cells.
  
 ## Step 5: Run Spark-Shell and connect to our Astra database
 1. If not already: `cd spark-3.0.1-bin-hadoop2.7`
