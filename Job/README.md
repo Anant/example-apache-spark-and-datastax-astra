@@ -1,6 +1,6 @@
 # Run an Apache Spark job on a DataStax Astra database
 
-In this directory, we will be running 2 Spark jobs on our Astra database. The first Spark job will read our Leaves table (same table from the `Connect` directory, but with a few more records), and create 2 new tables: `leaves_by_tag` and `tags`. The first Spark job will take the data from the Leaves table and create 2 dataframes with spark.sql manipulations. Then, we will create the 2 tables mentioned above, and seed them with their respective dataframes. The second Spark job runs the same code as the first Spark job minus the creation of the tables in order to update the existing tables (`leaves_by_tag` and `tags`) with a new record that was added to the Leaves table.
+In this directory, we will be running 2 Spark jobs on our Astra database. The first Spark job will read our `leaves` table (same table from the `Connect` directory, but with a few more records), and create 2 new tables: `leaves_by_tag` and `tags`. The first Spark job will take the data from the `leaves` table and create 2 dataframes with spark.sql manipulations. Then, we will create the 2 tables mentioned above, and seed them with their respective dataframes. The second Spark job runs the same code as the first Spark job minus the creation of the tables in order to update the existing tables (`leaves_by_tag` and `tags`) with a new record that was added to the `leaves` table.
 
 We will be using [Gitpod](https://www.gitpod.io/) as our dev environment so that you can quickly test this out without having to worry about OS inconsistencies. If you have not already opened this in gitpod, then `CTR + Click` the button below and get started! <br></br>
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/adp8ke/Apache-Spark-and-DataStax-Astra)
@@ -51,8 +51,9 @@ We will be using [Gitpod](https://www.gitpod.io/) as our dev environment so that
 ## Step 10: See the Results of the First Spark Job on DataStax Astra Studio
 1. Run cells 4-5 in the notebook to visualize the results of the Spark job
 
-## Step 11: Add a New Record to the `Leaves` table to Set Up the Second Spark Job
-1. Run cell 6 in the notebook to add a new record to the `Leaves` table
+## Step 11: Add a New Record to the `leaves` table to Set Up the Second Spark Job
+1. Run cell 6 in the notebook to add a new record to the `leaves` table.
+2. Run cell 3 again to confirm that there are now 3 records in the `leaves` table.
 
 ## Step 12: Edit Values in `spark-cassandra/src/main/scala/update.scala`
 1. Insert your specific configs and credentials in lines 12-16
@@ -72,7 +73,7 @@ We will be using [Gitpod](https://www.gitpod.io/) as our dev environment so that
 ~~~
 
 ## Step 15: See the Results of the Second Spark Job on DataStax Astra Studio
-1. Run cells 4-5 in the notebook to visualize the results of the Spark job
+1. Run cells 4-5 in the notebook to visualize the results of the second Spark job
 
 ## Additional Resources
 
