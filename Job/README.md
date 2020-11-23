@@ -51,8 +51,8 @@ We will be using [Gitpod](https://www.gitpod.io/) as our dev environment so that
 ## Step 10: See the Results of the First Spark Job on DataStax Astra Studio
 1. Run cells 4-5 in the notebook to visualize the results of the Spark job
 
-## Step 11: See the Results of the First Spark Job on DataStax Astra Studio
-1. Run cells 4-5 in the notebook to visualize the results of the Spark job
+## Step 11: Add a New Record to the `Leaves` table to Set Up the Second Spark Job
+1. Run cell 6 in the notebook to add a new record to the `Leaves` table
 
 ## Step 12: Edit Values in `spark-cassandra/src/main/scala/update.scala`
 1. Insert your specific configs and credentials in lines 12-16
