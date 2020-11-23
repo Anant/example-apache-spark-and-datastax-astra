@@ -45,6 +45,9 @@ We will be using [Gitpod](https://www.gitpod.io/) as our dev environment so that
 /workspace/Apache-Spark-and-DataStax-Astra/Job/spark-cassandra/target/scala-2.12/spark-cassandra-assembly-0.1.0-SNAPSHOT.jar
 ~~~
 
+## Step 10: See the Results of the Spark Job on DataStax Astra Studio
+1. You should see 2 new tables and they should be seeded
+
 ## Additional Resources
 
 - If you want to watch how to do this in a live demonstration, check out this [YouTube Video]()
