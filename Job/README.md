@@ -27,8 +27,9 @@ We will be using [Gitpod](https://www.gitpod.io/) as our dev environment so that
 1. `curl -L -s https://github.com/sbt/sbt/releases/download/v1.4.3/sbt-1.4.3.tgz | tar xvz -C /workspace/Apache-Spark-and-DataStax-Astra/Job`
 
 ## Step 6: Start sbt server in `spark-cassandra` directory
-1. `cd spark-cassandra`
-2. `../sbt/bin/sbt`
+1. Open a new terminal
+2. `cd Job/spark-cassandra`
+3. `../sbt/bin/sbt`
 
 ## Step 7: Edit Values in `spark-cassandra/src/main/scala/spark-cassandra.scala`
 1. Insert your specific configs and credentials in lines 12-16
