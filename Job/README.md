@@ -47,14 +47,14 @@ We will be using [Gitpod](https://www.gitpod.io/) as our dev environment so that
 /workspace/Apache-Spark-and-DataStax-Astra/Job/spark-cassandra/target/scala-2.12/spark-cassandra-assembly-0.1.0-SNAPSHOT.jar
 ~~~
 
-## Step 10: See the Results of the Spark Job on DataStax Astra Studio
+## Step 10: See the Results of the First Spark Job on DataStax Astra Studio
 1. Run cells 4-5 in the notebook to visualize the results of the Spark job
 
 ## Step 11: Edit Values in `spark-cassandra/src/main/scala/update.scala`
 1. Insert your specific configs and credentials in lines 12-16
 2. Save the file
 
-## Step 12: Build Fat JAR
+## Step 12: Update Fat JAR
 1. Run `assembly` in sbt server to build jar
  
 ## Step 13: Run Second Spark-Submit Job to Update the `leaves_by_tag` and `tags` tables
@@ -66,6 +66,9 @@ We will be using [Gitpod](https://www.gitpod.io/) as our dev environment so that
 --files /workspace/Apache-Spark-and-DataStax-Astra/Job/secure-connect-{your-database}.zip \
 /workspace/Apache-Spark-and-DataStax-Astra/Job/spark-cassandra/target/scala-2.12/spark-cassandra-assembly-0.1.0-SNAPSHOT.jar
 ~~~
+
+## Step 14: See the Results of the Second Spark Job on DataStax Astra Studio
+1. Run cells 4-5 in the notebook to visualize the results of the Spark job
 
 ## Additional Resources
 
