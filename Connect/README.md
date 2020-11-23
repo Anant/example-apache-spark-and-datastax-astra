@@ -53,5 +53,5 @@ spark.sql("select * from leaves").show
 
 ## Additional Resources
 
-- If you want to watch how to do this in a live demonstration, check out this [YouTube Video]()
-- Check out this accompanying [blog]() as well!
+- If you want to watch how to do this in a live demonstration, check out this [YouTube Video](https://youtu.be/sCh07TeUWpk)
+- Check out this accompanying [blog](https://blog.anant.us/connect-apache-spark-and-datastax-astra/) as well!
