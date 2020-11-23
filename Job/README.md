@@ -1,5 +1,7 @@
 # Run an Apache Spark job on a DataStax Astra database
 
+In this directory, we will be running 2 Spark jobs on our Astra database. The first Spark job will read our Leaves table (same table from the `Connect` directory, but with a few more records), and create 2 new tables: `leaves_by_tag` and `tags`. The first Spark job will take the data from the Leaves table and create 2 dataframes with spark.sql manipulations. Then, we will create the 2 tables mentioned above, and seed them with their respective dataframes. The second Spark job runs the same code as the first Spark job minus the creation of the tables in order to update the existing tables (`leaves_by_tag` and `tags`) with a new record that was added to the Leaves table.
+
 We will be using [Gitpod](https://www.gitpod.io/) as our dev environment so that you can quickly test this out without having to worry about OS inconsistencies. If you have not already opened this in gitpod, then `CTR + Click` the button below and get started! <br></br>
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/adp8ke/Apache-Spark-and-DataStax-Astra)
 
@@ -17,9 +19,9 @@ We will be using [Gitpod](https://www.gitpod.io/) as our dev environment so that
 1. If you do not already have a DataStax Astra database, you can follow the set-up instructions on the README.md for https://github.com/Anant/cassandra.api up to Step 1.4 or "Download Secure Connect Bundle".
 2. Once you have downloaded the Astra Secure Connect Bundle, drag-and-drop it into the "Job" directory in Gitpod.
   
-## Step 4: Download DataStax Studio Notebook and Run Cells in Astra Studio
+## Step 4: Download DataStax Studio Notebook and Run Cells 1-3 in Astra Studio
 1. While we have DataStax Astra open, let's go ahead and download this notebook [file](). Once the notebook is downloaded, open Studio on DataStax Astra and then drag-and-drop the notebook file into Studio.
-2. Run the cells in the notebook and set up our Astra database for when we connect to it using Apache Spark. Don't forget to select your keyspace when running the cells.
+2. Run cells 1-3 in the notebook and set up our Astra database for when we connect to it using Apache Spark. Don't forget to select your keyspace when running the cells.
 
 ## Step 5: Download sbt 1.4.3
 1. `curl -L -s https://github.com/sbt/sbt/releases/download/v1.4.3/sbt-1.4.3.tgz | tar xvz -C /workspace/Apache-Spark-and-DataStax-Astra/Job`
@@ -29,13 +31,13 @@ We will be using [Gitpod](https://www.gitpod.io/) as our dev environment so that
 2. `../sbt/bin/sbt`
 
 ## Step 7: Edit Values in `spark-cassandra/src/main/scala/spark-cassandra.scala`
-1. Insert your specific configs in lines 
+1. Insert your specific configs and credentials in lines 12-16
 2. Save the file
 
 ## Step 8: Build Fat JAR
-1. Run `sbt assembly` in sbt server to build jar
+1. Run `assembly` in sbt server to build the JAR
  
-## Step 9: Run Spark-Submit and Run a Job on DataStax Astra
+## Step 9: Run First Spark-Submit Job to Create and Seed `leaves_by_tag` and `tags` tables
 1. If not already: `cd spark-3.0.1-bin-hadoop2.7`
 2. Insert your specific database name in the spot designated below
 3. Run the block in terminal to run the Spark Job
@@ -46,7 +48,24 @@ We will be using [Gitpod](https://www.gitpod.io/) as our dev environment so that
 ~~~
 
 ## Step 10: See the Results of the Spark Job on DataStax Astra Studio
-1. You should see 2 new tables and they should be seeded
+1. Run cells 4-5 in the notebook to visualize the results of the Spark job
+
+## Step 11: Edit Values in `spark-cassandra/src/main/scala/update.scala`
+1. Insert your specific configs and credentials in lines 12-16
+2. Save the file
+
+## Step 12: Build Fat JAR
+1. Run `assembly` in sbt server to build jar
+ 
+## Step 13: Run Second Spark-Submit Job to Update the `leaves_by_tag` and `tags` tables
+1. If not already: `cd spark-3.0.1-bin-hadoop2.7`
+2. Insert your specific database name in the spot designated below
+3. Run the block in terminal to run the Spark Job
+~~~
+./bin/spark-submit --class sparkCassandra.Update \
+--files /workspace/Apache-Spark-and-DataStax-Astra/Job/secure-connect-{your-database}.zip \
+/workspace/Apache-Spark-and-DataStax-Astra/Job/spark-cassandra/target/scala-2.12/spark-cassandra-assembly-0.1.0-SNAPSHOT.jar
+~~~
 
 ## Additional Resources
 
