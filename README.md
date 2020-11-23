@@ -10,4 +10,4 @@ In the `Connect` directory, we discuss how to connect Apache Spark to DataStax A
 
 ## [Run an Apache Spark Job on a DataStax Astra database](https://github.com/adp8ke/Apache-Spark-and-DataStax-Astra/tree/main/Job)
 
-Coming soon!
+In the `Job` directory, we discuss how to run an Apache Spark job on DataStax Astra using Spark Submit. The instructions are outlined in the README.md file and you can fork the repository to further test on your own. Click [here](https://github.com/adp8ke/Apache-Spark-and-DataStax-Astra/tree/main/Job) to get started!
