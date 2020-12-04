@@ -34,11 +34,11 @@ object Leaves {
         val leavesByTag = spark.sql("select tags as tag, title, url, tags from leaves").withColumn("tag", explode($"tag"))
         val tagsDF = spark.sql("select tags as tag from leaves").withColumn("tag", explode($"tag")).groupBy("tag").count()
 
-        leavesByTag.createCassandraTable("test", "leaves_by_tag", partitionKeyColumns = Some(Seq("tag")), clusteringKeyColumns = Some(Seq("title")))
-        leavesByTag.write.cassandraFormat("leaves_by_tag", "test").mode("append").save()
+        leavesByTag.createCassandraTable(keyspace, "leaves_by_tag", partitionKeyColumns = Some(Seq("tag")), clusteringKeyColumns = Some(Seq("title")))
+        leavesByTag.write.cassandraFormat("leaves_by_tag", keyspace).mode("append").save()
 
-        tagsDF.createCassandraTable("test", "tags")
-        tagsDF.write.cassandraFormat("tags", "test").mode("append").save()
+        tagsDF.createCassandraTable(keyspace, "tags")
+        tagsDF.write.cassandraFormat("tags", keyspace).mode("append").save()
 
         spark.stop()
     }
