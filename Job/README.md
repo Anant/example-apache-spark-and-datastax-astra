@@ -3,10 +3,10 @@
 In this directory, we will be running 2 Spark jobs on our Astra database. The first Spark job will read our `leaves` table (same table from the `Connect` directory, but with a few more records), and create 2 new tables: `leaves_by_tag` and `tags`. The first Spark job will take the data from the `leaves` table and create 2 dataframes with spark.sql manipulations. Then, we will create the 2 tables mentioned above, and seed them with their respective dataframes. The second Spark job runs the same code as the first Spark job minus the creation of the tables in order to update the existing tables (`leaves_by_tag` and `tags`) with a new record that was added to the `leaves` table.
 
 We will be using [Gitpod](https://www.gitpod.io/) as our dev environment so that you can quickly test this out without having to worry about OS inconsistencies. If you have not already opened this in gitpod, then `CTR + Click` the button below and get started! <br></br>
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/adp8ke/Apache-Spark-and-DataStax-Astra)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/Anant/example-Apache-Spark-and-DataStax-Astra)
 
 ## Step 1: Download Apache Spark 3.0.1
-1. `curl -L -s https://apache.osuosl.org/spark/spark-3.0.1/spark-3.0.1-bin-hadoop2.7.tgz | tar xvz -C /workspace/Apache-Spark-and-DataStax-Astra/Job`
+1. `curl -L -s https://apache.osuosl.org/spark/spark-3.0.1/spark-3.0.1-bin-hadoop2.7.tgz | tar xvz -C /workspace/example-Apache-Spark-and-DataStax-Astra/Job`
 
 ## Step 2: Run Apache Spark in standalone cluster mode with 1 worker
 1. If not already: `cd Job`
@@ -24,7 +24,7 @@ We will be using [Gitpod](https://www.gitpod.io/) as our dev environment so that
 2. Run cells 1-3 in the notebook and set up our Astra database for when we connect to it using Apache Spark. Don't forget to select your keyspace when running the cells.
 
 ## Step 5: Download sbt 1.4.3
-1. `curl -L -s https://github.com/sbt/sbt/releases/download/v1.4.3/sbt-1.4.3.tgz | tar xvz -C /workspace/Apache-Spark-and-DataStax-Astra/Job`
+1. `curl -L -s https://github.com/sbt/sbt/releases/download/v1.4.3/sbt-1.4.3.tgz | tar xvz -C /workspace/example-Apache-Spark-and-DataStax-Astra/Job`
 
 ## Step 6: Start sbt server in `spark-cassandra` directory
 1. Open a new terminal
