@@ -17,7 +17,8 @@ We will be using [Gitpod](https://www.gitpod.io/) as our dev environment so that
 
 ## Step 3: Download DataStax Astra Secure Connect Bundle and Insert into Gitpod
 1. If you do not already have a DataStax Astra database, you can follow the set-up instructions on the README.md for https://github.com/Anant/cassandra.api up to Step 1.4 or "Download Secure Connect Bundle".
-2. Once you have downloaded the Astra Secure Connect Bundle, drag-and-drop it into the "Job" directory in Gitpod.
+2. Once your database is active, connect to it, and click the Settings menu tab. Select Admin User for role and hit generate token. COPY DOWN YOUR CLIENT ID AND CLIENT SECRET as they will be used by Spark
+3. Once you have downloaded the Astra Secure Connect Bundle, drag-and-drop it into the "Job" directory in Gitpod.
   
 ## Step 4: Download DataStax Studio Notebook and Run Cells 1-3 in Astra Studio
 1. While we have DataStax Astra open, let's go ahead and download this notebook [file](https://drive.google.com/file/d/1XmLF1iKc23orQkagf0L-FOdqwKZPujdF/view?usp=sharing). Once the notebook is downloaded, open Studio on DataStax Astra and then drag-and-drop the notebook file into Studio.
