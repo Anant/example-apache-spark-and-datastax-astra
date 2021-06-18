@@ -33,8 +33,8 @@ We will be using [Gitpod](https://www.gitpod.io/) as our dev environment so that
 3. `../sbt/bin/sbt`
 
 ## Step 7: Edit Values in `spark-cassandra/src/main/scala/spark-cassandra.scala`
-1. Insert your specific configs and credentials in lines 12-16
-2. Save the file
+1. Insert your specific configs and credentials in lines 12-16. Your username is your Client ID, and your password is your Client Secret.
+3. Save the file
 
 ## Step 8: Build Fat JAR
 1. Run `assembly` in sbt server to build the JAR
@@ -57,7 +57,7 @@ We will be using [Gitpod](https://www.gitpod.io/) as our dev environment so that
 2. Run cell 3 again to confirm that there are now 3 records in the `leaves` table.
 
 ## Step 12: Edit Values in `spark-cassandra/src/main/scala/update.scala`
-1. Insert your specific configs and credentials in lines 12-16
+1. Insert your specific configs and credentials in lines 12-16. Your username is your Client ID, and your password is your Client Secret.
 2. Save the file
 
 ## Step 13: Update Fat JAR
